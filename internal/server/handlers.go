@@ -62,6 +62,10 @@ func (h *Handlers) handleSet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if err := h.Store.Set(r.Context(), key, body); err != nil {
+		if errors.Is(err, store.ErrTooLarge) {
+			http.Error(w, err.Error(), http.StatusRequestEntityTooLarge)
+			return
+		}
 		http.Error(w, "internal error", http.StatusInternalServerError)
 		return
 	}

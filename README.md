@@ -40,16 +40,34 @@ go run . get mykey
 
 ## Server flags
 
-| Flag     | Default     | Description       |
-|----------|-------------|-------------------|
-| `--host` | `0.0.0.0`  | Host to bind to   |
-| `--port` | `8080`      | Port to listen on |
+| Flag             | Default    | Description                                    |
+|------------------|------------|------------------------------------------------|
+| `--host`         | `0.0.0.0`  | Host to bind to                               |
+| `--port`         | `8080`     | Port to listen on                              |
+| `--max-per-clip` |            | Max size per clip (e.g. `1M`, `512K`)          |
+| `--max-clips`    |            | Max total size of all clips (e.g. `100M`, `1G`)|
+
+Size values accept optional units: `B`, `K`/`KB`, `M`/`MB`, `G`/`GB` (case-insensitive). Plain numbers are treated as bytes.
+
+When `--max-per-clip` is exceeded the server responds with `413 Request Entity Too Large`. When `--max-clips` is exceeded the oldest clip is evicted to make room.
 
 ## Client flags
 
 | Flag       | Default                  | Description |
 |------------|--------------------------|-------------|
 | `--server` | `http://localhost:8080`  | Server URL  |
+
+## Environment variables
+
+All flags can be set via environment variables. Flags given on the command line take precedence.
+
+| Variable           | Flag             | Command  |
+|--------------------|------------------|----------|
+| `CLIP_HOST`        | `--host`         | `server` |
+| `CLIP_PORT`        | `--port`         | `server` |
+| `CLIP_MAX_PER_CLIP`| `--max-per-clip` | `server` |
+| `CLIP_MAX_CLIPS`   | `--max-clips`    | `server` |
+| `CLIP_SERVER`      | `--server`       | `paste`, `get` |
 
 ## Development
 

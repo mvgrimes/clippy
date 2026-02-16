@@ -13,6 +13,9 @@ var getCmd = &cobra.Command{
 	Use:   "get [key]",
 	Short: "Fetch a paste and print to stdout",
 	Args:  cobra.MaximumNArgs(1),
+	PreRun: func(cmd *cobra.Command, args []string) {
+		bindEnv(cmd, "server", "CLIP_SERVER")
+	},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		srv, _ := cmd.Flags().GetString("server")
 		path := "/@"

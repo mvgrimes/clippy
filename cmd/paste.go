@@ -13,6 +13,9 @@ var pasteCmd = &cobra.Command{
 	Use:   "paste [key]",
 	Short: "Store a paste from stdin",
 	Args:  cobra.MaximumNArgs(1),
+	PreRun: func(cmd *cobra.Command, args []string) {
+		bindEnv(cmd, "server", "CLIP_SERVER")
+	},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		srv, _ := cmd.Flags().GetString("server")
 		path := "/@"
