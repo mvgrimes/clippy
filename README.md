@@ -20,9 +20,11 @@ go run . server
 # Default paste
 curl -d 'hello world' http://localhost:8080/@
 curl http://localhost:8080/@
+echo "hi" | curl -d @- http://localhost:8080/@
 
 # Named paste
 curl -d 'my content' http://localhost:8080/@/mykey
+echo "hi" | curl -d @- http://localhost:8080/@/mykey
 curl http://localhost:8080/@/mykey
 ```
 
