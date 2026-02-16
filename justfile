@@ -1,6 +1,6 @@
 APP      := "clippy"
 VERSION  := `perl -nE'm{Version\s*=\s*"(\d+\.\d+.\d+)"} && print $1' ./cmd/root.go`
-REGISTRY := "gcr.io/docker-registry-mg"
+REGISTRY := "gcr.io/docker-registry-mg/mg"
 BINARY   := "clippy-linux-amd64"
 
 build:
@@ -21,6 +21,7 @@ cross-build:
 
 image-build: cross-build
   podman build -f ci/Dockerfile --platform=linux/amd64 -t mg/{{APP}} .
+  rm {{BINARY}}
 
 image-tag:
   podman tag mg/{{APP}}:latest mg/{{APP}}:{{VERSION}}
