@@ -7,19 +7,19 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// Version is the current version of clip.
+// Version is the current version of clippy.
 var Version = "0.1.0"
 
 var rootCmd = &cobra.Command{
-	Use:   "clip",
+	Use:   "clippy",
 	Short: "A simple pastebin service and CLI client",
 }
 
 var versionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "Print the version of clip",
+	Short: "Print the version of clippy",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("clip v%s\n", Version)
+		fmt.Printf("clippy v%s\n", Version)
 	},
 }
 

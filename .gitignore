@@ -4,8 +4,8 @@
 *.dll
 *.so
 *.dylib
-/clip
-/clip-linux-amd64
+/clippy
+/clippy-linux-amd64
 
 # Test binary, built with `go test -c`
 *.test

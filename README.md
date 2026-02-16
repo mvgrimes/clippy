@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="logo.svg" width="120" alt="clip logo">
+  <img src="logo.svg" width="120" alt="clippy logo">
 </p>
 
-# clip
+# clippy
 
 A simple pastebin service and CLI client, written in Go.
 

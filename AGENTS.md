@@ -1,7 +1,7 @@
-# Agent Guidelines for clip
+# Agent Guidelines for clippy
 
 ## Project Overview
-`clip` is a simple pastebin service with a CLI client, written in Go 1.24 with Cobra.
+`clippy` is a simple pastebin service with a CLI client, written in Go 1.24 with Cobra.
 
 ## Architecture
 - `cmd/` — Cobra CLI commands (root, server, paste, get)

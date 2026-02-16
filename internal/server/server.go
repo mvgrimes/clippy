@@ -3,7 +3,7 @@ package server
 import (
 	"net/http"
 
-	"github.com/clip/internal/store"
+	"github.com/mvgrimes/clippy/internal/store"
 )
 
 // New creates an http.Handler with all routes registered.

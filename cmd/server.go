@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/clip/internal/server"
-	"github.com/clip/internal/store"
+	"github.com/mvgrimes/clippy/internal/server"
+	"github.com/mvgrimes/clippy/internal/store"
 	"github.com/spf13/cobra"
 )
 
 var serverCmd = &cobra.Command{
 	Use:   "server",
-	Short: "Start the clip HTTP server",
+	Short: "Start the clippy HTTP server",
 	PreRun: func(cmd *cobra.Command, args []string) {
 		bindEnv(cmd, "host", "CLIP_HOST")
 		bindEnv(cmd, "port", "CLIP_PORT")
@@ -44,7 +44,7 @@ var serverCmd = &cobra.Command{
 		handler := server.New(s)
 
 		addr := fmt.Sprintf("%s:%d", host, port)
-		fmt.Printf("clip server listening on %s\n", addr)
+		fmt.Printf("clippy server listening on %s\n", addr)
 		return http.ListenAndServe(addr, handler)
 	},
 }
