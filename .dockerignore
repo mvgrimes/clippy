@@ -1,0 +1,5 @@
+/ci/
+/tmp/
+.git/
+.claude/
+.goreleaser.yml
