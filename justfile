@@ -1,11 +1,11 @@
-APP      := "clippy"
+APP      := "clipr"
 VERSION  := `perl -nE'm{Version\s*=\s*"(\d+\.\d+.\d+)"} && print $1' ./cmd/root.go`
 REGISTRY := "gcr.io/docker-registry-mg/mg"
-BINARY   := "clippy-linux-amd64"
+BINARY   := "clipr-linux-amd64"
 
 build:
   echo "Building version {{VERSION}} of {{APP}}"
-  go build -o clippy main.go
+  go build -o clipr main.go
 
 lint:
   go vet ./... || true

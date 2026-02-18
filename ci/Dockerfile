@@ -3,10 +3,10 @@ FROM alpine
 RUN adduser -S -D -H -h /app appuser
 WORKDIR /app
 
-COPY ./clippy-linux-amd64 /app/clippy
-RUN chmod +x /app/clippy
+COPY ./clipr-linux-amd64 /app/clipr
+RUN chmod +x /app/clipr
 
 USER appuser
 
 EXPOSE 8080
-CMD [ "/app/clippy", "server" ]
+CMD [ "/app/clipr", "server" ]

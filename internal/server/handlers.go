@@ -8,7 +8,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/mvgrimes/clippy/internal/store"
+	"github.com/mvgrimes/clipr/internal/store"
 )
 
 //go:embed logo.svg

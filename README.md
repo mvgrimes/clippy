@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="logo.svg" width="120" alt="clippy logo">
+  <img src="logo.svg" width="120" alt="clipr logo">
 </p>
 
-# clippy
+# clipr
 
 A simple pastebin service and CLI client, written in Go.
 
@@ -65,11 +65,11 @@ All flags can be set via environment variables. Flags given on the command line 
 
 | Variable             | Flag             | Command  |
 |----------------------|------------------|----------|
-| `CLIPPY_HOST`        | `--host`         | `server` |
-| `CLIPPY_PORT`        | `--port`         | `server` |
-| `CLIPPY_MAX_PER_CLIP`| `--max-per-clip` | `server` |
-| `CLIPPY_MAX_CLIPS`   | `--max-clips`    | `server` |
-| `CLIPPY_SERVER`      | `--server`       | `paste`, `get` |
+| `CLIPR_HOST`        | `--host`         | `server` |
+| `CLIPR_PORT`        | `--port`         | `server` |
+| `CLIPR_MAX_PER_CLIP`| `--max-per-clip` | `server` |
+| `CLIPR_MAX_CLIPS`   | `--max-clips`    | `server` |
+| `CLIPR_SERVER`      | `--server`       | `paste`, `get` |
 
 ## Development
 

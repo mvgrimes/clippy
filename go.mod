@@ -1,4 +1,4 @@
-module github.com/mvgrimes/clippy
+module github.com/mvgrimes/clipr
 
 go 1.24
 

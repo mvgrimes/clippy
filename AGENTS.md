@@ -1,7 +1,7 @@
-# Agent Guidelines for clippy
+# Agent Guidelines for clipr
 
 ## Project Overview
-`clippy` is a simple pastebin service with a CLI client, written in Go 1.24 with Cobra.
+`clipr` is a simple pastebin service with a CLI client, written in Go 1.24 with Cobra.
 
 ## Architecture
 - `cmd/` — Cobra CLI commands (root, server, paste, get)

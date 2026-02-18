@@ -21,7 +21,7 @@
   <!-- Tiny gopher tooth -->
   <rect x="97" y="68" width="6" height="5" rx="1" fill="white" stroke="#333" stroke-width="1"/>
 
-  <!-- Go gopher ears/nubs on top of clippy -->
+  <!-- Go gopher ears/nubs on top of clipr -->
   <ellipse cx="78" cy="32" rx="8" ry="6" fill="#5DC9E2" stroke="#4AB8D1" stroke-width="1.5"/>
   <ellipse cx="122" cy="32" rx="8" ry="6" fill="#5DC9E2" stroke="#4AB8D1" stroke-width="1.5"/>
 

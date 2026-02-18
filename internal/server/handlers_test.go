@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mvgrimes/clippy/internal/store"
+	"github.com/mvgrimes/clipr/internal/store"
 )
 
 func setup() (*httptest.Server, store.Store) {

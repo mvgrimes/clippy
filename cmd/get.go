@@ -14,7 +14,7 @@ var getCmd = &cobra.Command{
 	Short: "Fetch a paste and print to stdout",
 	Args:  cobra.MaximumNArgs(1),
 	PreRun: func(cmd *cobra.Command, args []string) {
-		bindEnv(cmd, "server", "CLIPPY_SERVER")
+		bindEnv(cmd, "server", "CLIPR_SERVER")
 	},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		srv, _ := cmd.Flags().GetString("server")

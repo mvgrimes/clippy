@@ -4,19 +4,19 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/mvgrimes/clippy/internal/server"
-	"github.com/mvgrimes/clippy/internal/store"
+	"github.com/mvgrimes/clipr/internal/server"
+	"github.com/mvgrimes/clipr/internal/store"
 	"github.com/spf13/cobra"
 )
 
 var serverCmd = &cobra.Command{
 	Use:   "server",
-	Short: "Start the clippy HTTP server",
+	Short: "Start the clipr HTTP server",
 	PreRun: func(cmd *cobra.Command, args []string) {
-		bindEnv(cmd, "host", "CLIPPY_HOST")
-		bindEnv(cmd, "port", "CLIPPY_PORT")
-		bindEnv(cmd, "max-per-clip", "CLIPPY_MAX_PER_CLIP")
-		bindEnv(cmd, "max-clips", "CLIPPY_MAX_CLIPS")
+		bindEnv(cmd, "host", "CLIPR_HOST")
+		bindEnv(cmd, "port", "CLIPR_PORT")
+		bindEnv(cmd, "max-per-clip", "CLIPR_MAX_PER_CLIP")
+		bindEnv(cmd, "max-clips", "CLIPR_MAX_CLIPS")
 	},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		host, _ := cmd.Flags().GetString("host")
@@ -44,7 +44,7 @@ var serverCmd = &cobra.Command{
 		handler := server.New(s)
 
 		addr := fmt.Sprintf("%s:%d", host, port)
-		fmt.Printf("clippy server listening on %s\n", addr)
+		fmt.Printf("clipr server listening on %s\n", addr)
 		return http.ListenAndServe(addr, handler)
 	},
 }
